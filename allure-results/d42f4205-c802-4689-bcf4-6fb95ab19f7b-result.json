@@ -1,0 +1,53 @@
+{
+    "name": "shouldNotCreateNewWithEmptyDescription",
+    "start": 1768233492706,
+    "stop": 1768233507004,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "d42f4205-c802-4689-bcf4-6fb95ab19f7b",
+    "historyId": "b10274a275c76b2f45baa189a057449c",
+    "fullName": "ru.iteco.fmhandroid.ui.CreateNewsTests.shouldNotCreateNewWithEmptyDescription",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.CreateNewsTests"
+        },
+        {
+            "name": "testMethod",
+            "value": "shouldNotCreateNewWithEmptyDescription"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.CreateNewsTests"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(72)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

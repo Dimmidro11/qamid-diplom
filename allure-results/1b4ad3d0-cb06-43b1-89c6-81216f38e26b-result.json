@@ -1,0 +1,53 @@
+{
+    "name": "shouldOpenPopupMenuLogout",
+    "start": 1768234265181,
+    "stop": 1768234269871,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "1b4ad3d0-cb06-43b1-89c6-81216f38e26b",
+    "historyId": "16d6c4d24b0aa0c660fa4ad9a9cef946",
+    "fullName": "ru.iteco.fmhandroid.ui.NavigationTests.shouldOpenPopupMenuLogout",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.NavigationTests"
+        },
+        {
+            "name": "testMethod",
+            "value": "shouldOpenPopupMenuLogout"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.NavigationTests"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(54)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

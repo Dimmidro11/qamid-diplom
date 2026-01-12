@@ -12,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.collectLatest
+import ru.iteco.fmhandroid.EspressoIdlingResources
 import ru.iteco.fmhandroid.R
 import ru.iteco.fmhandroid.adapter.NewsListAdapter
 import ru.iteco.fmhandroid.databinding.FragmentMainBinding
@@ -90,9 +91,11 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         authorizationMenu.setOnMenuItemClickListener {
             when (it.itemId) {
                 R.id.authorization_logout_menu_item -> {
+                    EspressoIdlingResources.increment();
                     authViewModel.logOut()
                     findNavController().navigate(R.id.action_mainFragment_to_authFragment)
                     true
+
                 }
 
                 else -> false

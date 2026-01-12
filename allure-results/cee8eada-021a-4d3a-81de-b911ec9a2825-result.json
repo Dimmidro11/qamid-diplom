@@ -1,0 +1,53 @@
+{
+    "name": "shouldCheckboxActiveBeClickable",
+    "start": 1768234564588,
+    "stop": 1768234570998,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "cee8eada-021a-4d3a-81de-b911ec9a2825",
+    "historyId": "a33b3502044196911db35778cf4bc772",
+    "fullName": "ru.iteco.fmhandroid.ui.EditNewsTests.shouldCheckboxActiveBeClickable",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.EditNewsTests"
+        },
+        {
+            "name": "testMethod",
+            "value": "shouldCheckboxActiveBeClickable"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.EditNewsTests"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(57)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

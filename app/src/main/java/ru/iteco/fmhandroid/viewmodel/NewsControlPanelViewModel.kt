@@ -6,6 +6,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
+import ru.iteco.fmhandroid.EspressoIdlingResources
 import ru.iteco.fmhandroid.dto.News
 import ru.iteco.fmhandroid.dto.NewsWithCategory
 import ru.iteco.fmhandroid.dto.User
@@ -58,7 +59,12 @@ class NewsControlPanelViewModel @Inject constructor(
 
     fun onRefresh() {
         viewModelScope.launch {
-            internalOnRefresh()
+            EspressoIdlingResources.increment()
+            try {
+                internalOnRefresh()
+            } finally {
+                EspressoIdlingResources.decrement()
+            }
         }
     }
 
@@ -91,35 +97,44 @@ class NewsControlPanelViewModel @Inject constructor(
 
     fun save(newsItem: News) {
         viewModelScope.launch {
+            EspressoIdlingResources.increment()
             try {
                 newsRepository.createNews(newsItem)
                 newsItemCreatedEvent.emit(Unit)
             } catch (e: Exception) {
                 e.printStackTrace()
                 saveNewsItemExceptionEvent.emit(Unit)
+            } finally {
+                EspressoIdlingResources.decrement()
             }
         }
     }
 
     fun edit(newsItem: News) {
         viewModelScope.launch {
+            EspressoIdlingResources.increment()
             try {
                 newsRepository.modificationOfExistingNews(newsItem)
                 editNewsItemSavedEvent.emit(Unit)
             } catch (e: Exception) {
                 e.printStackTrace()
                 editNewsItemExceptionEvent.emit(Unit)
+            } finally {
+                EspressoIdlingResources.decrement()
             }
         }
     }
 
     fun remove(id: Int) {
         viewModelScope.launch {
+            EspressoIdlingResources.increment()
             try {
                 newsRepository.removeNewsItemById(id)
             } catch (e: Exception) {
                 e.printStackTrace()
                 removeNewsItemExceptionEvent.emit(Unit)
+            } finally {
+                EspressoIdlingResources.decrement()
             }
         }
     }
@@ -137,8 +152,10 @@ class NewsControlPanelViewModel @Inject constructor(
         viewModelScope.launch {
             if (newsItem.isOpen) {
                 newsRepository.changeIsOpen(newsItem.copy(isOpen = false))
+                EspressoIdlingResources.decrement()
             } else {
                 newsRepository.changeIsOpen(newsItem.copy(isOpen = true))
+                EspressoIdlingResources.decrement()
             }
         }
     }

@@ -17,6 +17,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
+import ru.iteco.fmhandroid.EspressoIdlingResources
 import ru.iteco.fmhandroid.R
 import ru.iteco.fmhandroid.adapter.NewsControlPanelListAdapter
 import ru.iteco.fmhandroid.adapter.NewsOnInteractionListener
@@ -109,10 +110,12 @@ class NewsControlPanelFragment : Fragment(R.layout.fragment_news_control_panel) 
 
         val adapter = NewsControlPanelListAdapter(object : NewsOnInteractionListener {
             override fun onCard(newsItem: News) {
+                EspressoIdlingResources.increment()
                 viewModel.onCard(newsItem)
             }
 
             override fun onEdit(newItemWithCategory: NewsWithCategory) {
+
                 val action = NewsControlPanelFragmentDirections
                     .actionNewsControlPanelFragmentToCreateEditNewsFragment(newItemWithCategory)
                 findNavController().navigate(action)

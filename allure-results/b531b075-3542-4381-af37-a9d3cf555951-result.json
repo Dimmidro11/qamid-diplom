@@ -1,0 +1,53 @@
+{
+    "name": "shouldNotLoginInvalidLogin",
+    "start": 1768233451021,
+    "stop": 1768233458623,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "b531b075-3542-4381-af37-a9d3cf555951",
+    "historyId": "3554cb6dd0080ea2383500212ead5ff8",
+    "fullName": "ru.iteco.fmhandroid.ui.AuthorizationTests.shouldNotLoginInvalidLogin",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.AuthorizationTests"
+        },
+        {
+            "name": "testMethod",
+            "value": "shouldNotLoginInvalidLogin"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.AuthorizationTests"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(72)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

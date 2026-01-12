@@ -13,6 +13,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
+import ru.iteco.fmhandroid.EspressoIdlingResources
 import ru.iteco.fmhandroid.R
 import ru.iteco.fmhandroid.api.UserApi
 import ru.iteco.fmhandroid.auth.AppAuth
@@ -231,6 +232,7 @@ class SplashScreenFragment : Fragment(R.layout.fragment_splash_screen) {
             setTextColor(ContextCompat.getColor(context, splashscreenImage.titleColor))
         }
 
+        EspressoIdlingResources.increment();
         lifecycleScope.launch {
             delay(3_000)
             authViewModel.authorization()
@@ -242,6 +244,8 @@ class SplashScreenFragment : Fragment(R.layout.fragment_splash_screen) {
 
         binding.splashScreenCircularProgressIndicator.visibility = View.GONE
         offFullScreen()
+
+        EspressoIdlingResources.decrement();
     }
 
     private fun onFullScreen() {
