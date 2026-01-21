@@ -1,4 +1,4 @@
-package ru.iteco.fmhandroid.ui.data;
+package ru.iteco.fmhandroid.ui.utils;
 import android.os.IBinder;
 import android.view.WindowManager;
 import androidx.test.espresso.Root;

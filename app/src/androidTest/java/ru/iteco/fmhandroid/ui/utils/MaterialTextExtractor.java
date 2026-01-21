@@ -1,4 +1,4 @@
-package ru.iteco.fmhandroid.ui.data;
+package ru.iteco.fmhandroid.ui.utils;
 import static androidx.test.espresso.Espresso.onView;
 
 import androidx.test.espresso.UiController;
